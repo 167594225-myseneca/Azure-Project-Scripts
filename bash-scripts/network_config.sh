@@ -7,14 +7,14 @@ source  ./logos.sh
 # Update the lines that are specific to your network 
 # /////////////////////////////////////////////////////////////
 
-RG_NAME=""     # your student group
-LOCATION=""    # your location
-ID=""          #unique ID assigned to you
+RG_NAME="Student-RG-1202197"     # your student group
+LOCATION="canadaeast"    # your location
+ID="74"          #unique ID assigned to you
 
-Student_vnet_name=""
-Student_vnet_address=""
-Client_Subnet_name=""
-Client_Subnet_address=""
+Student_vnet_name="Student-1202197-vnet"
+Student_vnet_address="10.18.76.0/24"
+Client_Subnet_name="Virtual-Desktop-Client"
+Client_Subnet_address="10.18.76.0/24"
 
 # ---------------------------------------------------
 # Networking - Virtual Networks
@@ -35,10 +35,10 @@ declare -a Server_Subnet_addresses=("172.17.$ID.32/27" "172.17.$ID.64/27" "172.1
 
 # ---------------------------------------------------
 # Networking - Virtual Networks - Network Peerings
-Peer_RT="RoutertoStudent"
-Peer_TR="StudenttoRouter"
-Peer_RS="RoutertoServer"
-Peer_SR="ServertoRouter"
+Peer_RT="Router${ID}-Student1202197"
+Peer_TR="Student1202197-Router${ID}"
+Peer_RS="Router${ID}-Server${ID}"
+Peer_SR="Server${ID}-Router${ID}"
 declare -a Peerings_list=("$Peer_RT" "$Peer_TR" "$Peer_RS" "$Peer_SR")
 
 # ---------------------------------------------------

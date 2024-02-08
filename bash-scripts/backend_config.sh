@@ -7,8 +7,8 @@
 # /////////////////////////////////////////////////////////////
 # ---------------------------------------------------
 # Windows VM Credentials
-USER_NAME=""
-ADMIN_PW=""
+USER_NAME="admin74"
+ADMIN_PW="Thequickbrownfox01"
 
 # ---------------------------------------------------
 # sshkey pair names
@@ -66,7 +66,7 @@ dummy_IP_2="172.17.$ID.42"
 Azure_Default_DNS="168.63.129.16"
 
 declare -a vm_list=("$VM_WC" "$VM_LR" "$VM_WS" "$VM_LS")
-declare -a nic_list=("$NIC_WC" "$NIC_LR" "$NIC_WS"  "$NIC_LS")
+declare -a nic_list=("$NIC_WC" "$NIC_LR" "$NIC_WS" "$NIC_LS")
 declare -a NSG_list=("$WC_NSG_name" "$LR_NSG_name" "$LS_NSG_name" "$WS_NSG_name")
 
 # ---------------------------------------------------
